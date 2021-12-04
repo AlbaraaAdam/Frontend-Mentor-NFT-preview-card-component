@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Outfit:wght@300;400;600&family=Poppins:wght@400;700&family=Roboto:wght@300;900&display=swap");
+
+body {
+  background: hsl(217, 54%, 11%);
+  font-family: "Outfit";
+  margin: 0;
+}
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+.main {
+  width: 375px;
+  background: hsl(216, 50%, 16%);
+  border-radius: 0.8em;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+.sub {
+  padding: 1.5em;
+}
+.equ {
+  display: flex;
+  position: relative;
+}
+.equilibrium {
+  width: 100%;
+  border-radius: 0.5em;
+  box-shadow: 0 0 200px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.equ::before {
+  display: none;
+  content: "";
+  position: absolute;
+  background: hsl(178, 100%, 50%);
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5em;
+  opacity: 0.5;
+}
+.equ::after {
+  display: none;
+  content: " ";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url(images/icon-view.svg);
+  height: 100%;
+  width: 100%;
+  left: 140px;
+  top: 140px;
+}
+.equ:hover::before {
+  display: block;
+}
+.equ:hover::after {
+  display: block;
+}
+h1 {
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+h1:hover {
+  color: hsl(178, 100%, 50%);
+}
+p {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  line-height: 2em;
+}
+.vals {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  position: relative;
+  margin-bottom: 1.8em;
+}
+
+.val img {
+  width: 13px;
+}
+
+.val a {
+  text-decoration: none;
+  color: hsl(178, 100%, 50%);
+  left: 22px;
+  position: absolute;
+}
+
+.time img {
+  position: absolute;
+  right: 87px;
+  bottom: 5px;
+  width: 20px;
+}
+.days {
+  text-decoration: none;
+  color: hsl(215, 51%, 70%);
+}
+.user {
+  display: flex;
+  position: relative;
+  margin-top: 1.5em;
+}
+.user img {
+  border: white solid 1.5px;
+  border-radius: 5em;
+  width: 32px;
+  height: 32px;
+}
+.user-info {
+  color: hsl(215, 51%, 70%);
+  position: absolute;
+  right: 93px;
+  top: 10px;
+}
+.user-info span {
+  color: white;
+  cursor: pointer;
+}
+.user-info span:hover {
+  color: hsl(178, 100%, 50%);
+}
+.user::before {
+  content: "";
+  position: absolute;
+  width: 325px;
+  background: hsla(215, 52%, 70%, 0.527);
+  height: 0.5px;
+  bottom: 55px;
+}
+.attribution {
+  color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 18px;
+}
+.attribution a {
+  color: hsl(215, 51%, 70%);
+}
