@@ -4,6 +4,7 @@ body {
   background: hsl(217, 54%, 11%);
   font-family: "Outfit";
   margin: 0;
+  position: relative;
 }
 .bg {
   display: flex;
@@ -32,35 +33,25 @@ body {
   cursor: pointer;
 }
 .equ::before {
-  display: none;
+  display: block;
   content: "";
   position: absolute;
-  background: hsl(178, 100%, 50%);
+  background: hsla(178, 100%, 50%, 50%) url(images/icon-view.svg) center
+    no-repeat;
   height: 100%;
   width: 100%;
   border-radius: 0.5em;
-  opacity: 0.5;
-}
-.equ::after {
-  display: none;
-  content: " ";
-  position: absolute;
-  background-repeat: no-repeat;
-  background-image: url(images/icon-view.svg);
-  height: 100%;
-  width: 100%;
-  left: 140px;
-  top: 140px;
+  opacity: 0;
+  transition: 0.3s;
 }
 .equ:hover::before {
-  display: block;
+  opacity: 1;
 }
-.equ:hover::after {
-  display: block;
-}
+
 h1 {
   color: hsl(0, 0%, 100%);
   cursor: pointer;
+  transition: 0.3s;
 }
 h1:hover {
   color: hsl(178, 100%, 50%);
@@ -136,7 +127,6 @@ p {
   position: absolute;
   left: 0;
   bottom: 0;
-  font-size: 18px;
 }
 .attribution a {
   color: hsl(215, 51%, 70%);
